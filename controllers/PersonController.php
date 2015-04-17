@@ -83,7 +83,7 @@ class PersonController extends Controller
      * Displays a single Profile model.
      * @param string $id
      * @return mixed
-
+     */
     public function actionProfile($id)
     {
        $personModel = new Person();
@@ -92,7 +92,7 @@ class PersonController extends Controller
 
        return $this->render('profile', ['model' => $this->findModel($id),  'avatar' => $avatar] );
     }
-*/
+
 
     /**
      * Creates a new Person model.
