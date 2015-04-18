@@ -20,7 +20,7 @@ $this->title = 'My Yii Application';
         <div class="row">
             <div class="col-lg-4">
                 <h2><?php
-                    echo Html::a('List', ['person/index'], ['class' => '']);
+                    echo Html::a('List', ['person/list'], ['class' => '']);
                     ?>
                 </h2>
 

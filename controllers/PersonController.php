@@ -37,9 +37,7 @@ class PersonController extends Controller
             'query' => Person::find(),
         ]);
 
-        return $this->render('index', [
-            'dataProvider' => $dataProvider,
-        ]);
+        return $this->render('index', ['dataProvider' => $dataProvider,]);
     }
 
     /**
@@ -49,8 +47,25 @@ class PersonController extends Controller
      */
     public function actionView($id)
     {
-        return $this->render('profile', ['model' => $this->findModel($id), ]);
+        return $this->render('view', ['model' => $this->findModel($id), ]);
     }
+
+
+    /**
+     * Displays a single Person model.
+     * @param string $id
+     * @return mixed
+     */
+    public function actionList()
+    {
+        $model = new Person();
+
+      //  $model->getNamesWithAddress();
+
+        return $this->render('list', ['namesWithAddress'=>$model->getNamesWithAddress()] );
+    }
+
+
 
 
     public function actionSelect($id)

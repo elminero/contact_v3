@@ -21,9 +21,6 @@ $this->params['breadcrumbs'][] = ['label' =>
 
 ?>
 
-<!-- contactph2/web -->
-<img src="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/pictures/diana.jpg" />
-
 
 <div class="person-view">
 

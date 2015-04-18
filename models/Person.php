@@ -133,6 +133,17 @@ return $this->hasMany(Order::className(), ['customer_id' => 'id'])
     }
 
 
+    public function getNamesWithAddress() {
+        $sql = "SELECT person.last_name, person.first_name, person.middle_name, person.alias_name,
+                address.street, address.city, address.state, address.iso
+                FROM person LEFT OUTER JOIN address
+                ON person.id = address.person_id";
+
+      return  \Yii::$app->db->createCommand($sql)->queryAll();
+    }
+
+
+
     /**
      * @return \yii\db\ActiveQuery
      */
