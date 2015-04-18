@@ -135,7 +135,7 @@ return $this->hasMany(Order::className(), ['customer_id' => 'id'])
 
     public function getNamesWithAddress() {
         $sql = "SELECT person.last_name, person.first_name, person.middle_name, person.alias_name,
-                address.street, address.city, address.state, address.iso
+                address.street, address.city, address.state, address.iso, address.postal_code
                 FROM person LEFT OUTER JOIN address
                 ON person.id = address.person_id";
 

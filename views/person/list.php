@@ -7,12 +7,10 @@
  */
 
 
-echo "views/person/list.php";
 
-echo "<br />";
 
 foreach($namesWithAddress as $name) {
-   echo $name["last_name"] . $name["first_name"] . $name["middle_name"] . $name["alias_name"] . $name["street"] . $name["city"] . $name["state"] . $name["iso"] . "<br />";
+   echo $name["last_name"] . $name["first_name"] . $name["middle_name"] . $name["alias_name"] . $name["street"] . $name["city"] . $name["state"] . $name["postal_code"] . $name["iso"] . "<br />";
 
 }
 
