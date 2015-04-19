@@ -79,7 +79,7 @@ $this->title = 'Profile';
     <?php
         $this->title = "Profile " . $model->id;
 
-    $this->params['breadcrumbs'][] = ['label' => 'People', 'url' => ['index']];
+    $this->params['breadcrumbs'][] = ['label' => 'People', 'url' => ['list']];
     $this->params['breadcrumbs'][] = ['label' => $this->title, ];
 
     $this->params['breadcrumbs'][] = ['label' =>
