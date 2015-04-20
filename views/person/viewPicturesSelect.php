@@ -7,9 +7,9 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Person */
 $this->title = 'Select Picture for Edit';
 
-$this->params['breadcrumbs'][] = ['label' => 'People', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'List', 'url' => ['person/list']];
 
-$this->params['breadcrumbs'][] = ['label' =>  "Profile " . $model->id, 'url' => ['person/view', 'id' => $model->id], ];
+$this->params['breadcrumbs'][] = ['label' =>  "Profile " . $model->id, 'url' => ['person/profile', 'id' => $model->id], ];
 
 $this->params['breadcrumbs'][] = ['label' =>  $this->title,];
 

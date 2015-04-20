@@ -77,20 +77,10 @@ $this->title = 'Profile';
 
 <div style="float: left"><!--Start BreadCrumbs div 1-->
     <?php
-        $this->title = "Profile " . $model->id;
+    $this->title = "Profile " . $model->id;
 
-    $this->params['breadcrumbs'][] = ['label' => 'People', 'url' => ['list']];
-    $this->params['breadcrumbs'][] = ['label' => $this->title, ];
-
-    $this->params['breadcrumbs'][] = ['label' =>
-                    $model->last_name .
-                    ", " .
-                    $model->first_name
-                    . " " .
-                    $model->middle_name
-                    . ", " .
-                    $model->alias_name
-                    ];
+    $this->params['breadcrumbs'][] = ['label' => 'List', 'url' => ['list']];
+    $this->params['breadcrumbs'][] = ['label' => $this->title ];
     ?>
 </div><!--End BreadCrumbs div 1-->
 

@@ -14,13 +14,13 @@ use yii\widgets\DetailView;
         //     Home People Profile Portfolio Picture
 
 
-        $this->params['breadcrumbs'][] = ['label' => 'People', 'url' => ['person/index']];
+        $this->params['breadcrumbs'][] = ['label' => 'List', 'url' => ['person/list']];
 
-        $this->params['breadcrumbs'][] = ['label' => "Profile " . $model->person_id, 'url' => ['person/view', 'id' => $model->person_id], ];
+        $this->params['breadcrumbs'][] = ['label' => "Profile " . $model->person_id, 'url' => ['person/profile', 'id' => $model->person_id], ];
 
         $this->params['breadcrumbs'][] = ['label' => "Portfolio " . $model->person_id, 'url' => ['person/portfolio', 'id' => $model->person_id], ];
 
-        $this->params['breadcrumbs'][] = ['label' => $this->title,  ];
+        $this->params['breadcrumbs'][] = ['label' => $this->title];
 
         ?>
     </div><!--End BreadCrumbs div 1-->

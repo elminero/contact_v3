@@ -3,6 +3,10 @@ use yii\helpers\Html;
 
 
 
+$this->params['breadcrumbs'][] = ['label' => 'List'];
+
+
+
 
 foreach($namesWithAddress as $name) {
 
