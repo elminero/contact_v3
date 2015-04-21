@@ -343,10 +343,4 @@ return $this->hasMany(Order::className(), ['customer_id' => 'id'])
         return $addressType;
     }
 
-
-
-
-
-
-
 }

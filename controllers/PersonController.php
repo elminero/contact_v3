@@ -15,17 +15,55 @@ use yii\filters\VerbFilter;
  */
 class PersonController extends Controller
 {
+
+    /*
+        public function behaviors()
+        {
+            return [
+                'verbs' => [
+                    'class' => VerbFilter::className(),
+                    'actions' => ['delete' => ['post'],
+                    ],
+              ],
+            ];
+        }
+
+    */
+
     public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['post'],
+        {
+            return [
+                'access' => [
+                    'class' => \yii\filters\AccessControl::className(),
+                    'only' => ['list', 'profile'],
+                    'rules' => [
+
+                        [
+                            'allow' => true,
+                            'actions' => ['list'],
+                            'roles' => ['@'],
+                        ],
+
+                        [
+                            'allow' => true,
+                            'actions' => ['profile'],
+                            'roles' => ['@'],
+                        ],
+
+                    ],
+
+
+
+
+
+
                 ],
-            ],
-        ];
-    }
+            ];
+        }
+
+
+
+
 
     /**
      * Lists all Person models.
