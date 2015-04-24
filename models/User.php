@@ -23,13 +23,13 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'username' => 'demo',
             'password' => 'demo',
             'authKey' => 'test101key',
-            'accessToken' => '101-token',
+//            'accessToken' => '101-token',
         ],
         '102' => [
             'id' => '102',
             'username' => 'ian',
             'password' => 'super8',
-            'authKey' => 'test102key',
+            'authKey' => 'jasdjahq', // authenticate the user by cookie
             'accessToken' => '102-token',
         ],
     ];
@@ -65,7 +65,7 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     public static function findByUsername($username)
     {
         foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
+            if ( strcasecmp($user['username'], $username) === 0 ) {
                 return new static($user);
             }
         }
