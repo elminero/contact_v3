@@ -112,12 +112,12 @@ class PictureController extends Controller
             {
                 $model->setAvatarToZeroByPersonId($model->person_id);
                 $model->save();
-                return $this->redirect(['person/view', 'id' => $model->person_id]);
+                return $this->redirect(['person/profile', 'id' => $model->person_id]);
 
             } else
             {
                 $model->save();
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['person/portfolio', 'id' => $model->person_id]);
             }
 
         } else {

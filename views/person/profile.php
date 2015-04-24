@@ -143,14 +143,13 @@ $this->title = 'Profile';
             ?>
         </h4>
 
-        <p>
+
             <?php
             foreach($model->phoneNumbers as $phoneNumber) {
-                $phoneData = $phoneNumber->type . " " . $phoneNumber->phone . " " . $phoneNumber->note;
-                echo Html::a($phoneData, ['phone-number/update', 'id' => $phoneNumber->id], ['class' => '']) . "<br />";
+                $phoneData = $phoneNumber->type . "<br /> " . $phoneNumber->phone . "<br /> " . $phoneNumber->note . "<hr />";
+                echo Html::a($phoneData, ['phone-number/update', 'id' => $phoneNumber->id], ['class' => '']);
             }
             ?>
-        </p>
 
 
     </div>
@@ -166,9 +165,8 @@ $this->title = 'Profile';
         <p>
             <?php
             foreach($model->emailAddresses as $emailAddress) {
-
-                $emailAddressData = $emailAddress->type . " " . $emailAddress->email . " " . $emailAddress->note;
-                echo Html::a($emailAddressData, ['email-address/update', 'id' => $emailAddress->id ], ['class' => '']) . "<br />";
+                $emailAddressData = $emailAddress->type . "<br />" . $emailAddress->email . "<br />" . $emailAddress->note . "<hr />";
+                echo Html::a($emailAddressData, ['email-address/update', 'id' => $emailAddress->id], ['class' => '']);
             }
             ?>
         </p>
